@@ -1,10 +1,9 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import GlobalStyles from "../styles/GlobalStyles";
 import Typography from "../styles/Typography";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Logo from "../components/Logo";
-// import Cursor from '../components/Cursor';
 import MouseContextProvider from "../context/mouse-context";
 import Particles from "../components/Particles";
 import styled from "styled-components";
@@ -22,6 +21,7 @@ const Heading = styled.header`
 
 const Content = styled(motion.div)`
   clip-path: polygon(0 3%, 100% 0, 100% 100%, 0% 100%);
+  margin-top:10rem;
   padding: 8rem 1rem 0rem 1rem;
   display: flex;
   flex-flow: column;

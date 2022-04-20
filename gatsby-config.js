@@ -4,8 +4,7 @@ module.exports = {
   plugins: [
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
-    `gatsby-plugin-scroll-reveal`,
-    "gatsby-image",
+    "gatsby-plugin-scroll-reveal",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
@@ -50,6 +49,7 @@ module.exports = {
     copyright:"2021",
     contact:"jayfergusonweb@gmail.com",
     logo: "/src/images/icon-svg/j-logo.svg",
-    img:"/src/images/"
+    img:"/src/images/",
+    siteUrl:"https://jay-ferguson.com/"
   },
 };

@@ -32,3 +32,4 @@ const IntroCard = ({children}) => {
 }
 
 export default IntroCard;
+

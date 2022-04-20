@@ -2,7 +2,7 @@
 title: Wordpress business website
 stack: Wordpress, PHP, HTML, Bootstrap, SCSS
 slug: wordpress-business-website
-thumb: ../images/icon.png
+thumbImg: ../images/icon.png
 featuredImg: ../images/featured/calc-banner.png
 link: https://codepen.io/
 github: https://github.com/Jay-Ferguson

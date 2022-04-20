@@ -2,7 +2,7 @@
 title: Video Streaming Site
 stack: react, firebase, tailwind.css, framer motion
 slug: react-project
-thumb: ../images/thumb/js-text-to-speach.png
+thumbImg: ../images/thumb/js-text-to-speach.png
 featuredImg: ../images/featured/calc-banner.png
 link: https://codepen.io/
 github: https://github.com/Jay-Ferguson

@@ -4,7 +4,6 @@ import Layout from "../components/Layout";
 import styled from "styled-components";
 import { ButtonMain } from "../components/Button";
 import { device } from '../styles/mediaQueries'
-// import Img from "gatsby-image";
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import IntroCard from "../components/IntroCard";
 
@@ -41,18 +40,6 @@ padding:2rem 0 6rem 0;
 margin:0 auto;
 
 `
-const ButtonLink = styled.a`
-  margin-top: 2.5rem;
-  background-color: var(--white);
-  font-size:1.5rem;   
-  border-radius: 50px;
-  width: 10rem;
-  height: 4rem;
-  color: var(--black);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
 
 export default function ProjectDetails({ data }) {
   const { html } = data.markdownRemark;
@@ -79,8 +66,8 @@ export default function ProjectDetails({ data }) {
 
       <PDetails dangerouslySetInnerHTML={{ __html: html }} />
       <ButtonsContainer>
-        <ButtonMain href={github} role="button">Github</ButtonMain>
-        <ButtonMain href={link} role="button">Live</ButtonMain>
+        <ButtonMain href={github} target="blank" role="button">Github</ButtonMain>
+        <ButtonMain href={link} target="blank" role="button">Live</ButtonMain>
       </ButtonsContainer>
     </Layout>
   );
@@ -101,6 +88,7 @@ export const query = graphql`
               width:400
               placeholder: BLURRED
               formats: WEBP
+              transformOptions:{fit: CONTAIN, cropFocus: CENTER}
             )
           }
         }

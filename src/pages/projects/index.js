@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../../components/Layout";
 import styled from "styled-components";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const Grid = styled.div`
 
@@ -39,11 +39,11 @@ const GridCard = styled.div`
   gap: 1rem;
   align-items: center;
   justify-content: flex-end;
-  transition: 0.2s;
+  transition: 0.1s;
 
   &:hover {
     transform: scale(1.02);
-    transition: 0.2s;
+    transition: 0.15s;
     background: rgba(255, 255, 255, 0.45);
   }
 `;
@@ -63,6 +63,8 @@ const Stack = styled.p`
 `;
 export default function Projects({ data }) {
   const projects = data.projects.nodes;
+  // const image = getImage(project.frontmatter.thumbImg.childImageSharp);
+
   return (
     <Layout>
       <h2>Portfolio</h2>
@@ -75,10 +77,12 @@ export default function Projects({ data }) {
               data-sal-delay="300"
               data-sal-easing="ease"
             >
-              <Img
-                fixed={project.frontmatter.thumb.childImageSharp.fixed}
+              <GatsbyImage
+                image={project.frontmatter.thumbImg.childImageSharp.gatsbyImageData}
+                style={{width:"80%"}}
                 alt="project-banner-image"
                 objectFit="contain"
+                placeholder="blurred"
               />
               <StyledH3>{project.frontmatter.title}</StyledH3>
               <Stack>{project.frontmatter.stack}</Stack>
@@ -92,28 +96,25 @@ export default function Projects({ data }) {
 // export page query
 
 export const query = graphql`
-  query ProjectPage {
-    projects: allMarkdownRemark {
-      nodes {
-        frontmatter {
-          slug
-          stack
-          title
-          thumb {
-            childImageSharp {
-              fixed(width: 200) {
-                ...GatsbyImageSharpFixed
-              }
-            }
+query ProjectPage {
+  projects: allMarkdownRemark {
+    nodes {
+      frontmatter {
+        slug
+        stack
+        title
+        thumbImg {
+          childImageSharp {
+            gatsbyImageData(
+              width:400
+              placeholder: BLURRED
+              layout: FULL_WIDTH
+              formats: [AUTO, WEBP]
+          )
           }
         }
-        id
-      }
-    }
-    contact: site {
-      siteMetadata {
-        contact
       }
     }
   }
+}
 `;

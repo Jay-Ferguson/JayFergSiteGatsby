@@ -3,33 +3,6 @@ import styled from 'styled-components';
 import IntroCard from "../components/IntroCard";
 import ExternalButton from '../components/ExternalButton';
 
-// const Button = styled.button`
-// background-color:var(--grey);
-// align-self:center;
-// text-transform: uppercase;
-// letter-spacing:.2rem;
-// font-size:1.2rem;
-// position:inherit;
-// margin-top:2rem;
-// width:10rem;
-// height:3.5rem;
-// box-shadow:5px 10px 10px -1px rgb(0 0 0 / 30%);
-// transition:.2s ease-in-out;
-
-// &:hover{
-// color:var(--white);
-// background:var(--black);
-// transition:.2s ease-in-out;
-// cursor:pointer;
-
-// }
-
-// &:active{
-
-// }
-
-// `
-
 const FormField = styled.form`
 display:flex;
 flex-flow:column;

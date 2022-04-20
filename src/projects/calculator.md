@@ -2,7 +2,7 @@
 title: JS Calculator 
 stack: JS CSS HTML
 slug: js-calculator
-thumb: ../images/icon.png
+thumbImg: ../images/icon.png
 featuredImg: ../images/featured/calc-banner.png
 link: https://codepen.io/
 github: https://github.com/Jay-Ferguson

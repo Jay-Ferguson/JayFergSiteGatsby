@@ -2,7 +2,7 @@
 title: React + Node Chat App
 stack: React, Express, Graphql, Apollo, Tailwind
 slug: node-react-chat-app
-thumb: ../images/thumb/js-canvas-draw.png
+thumbImg: ../images/thumb/js-canvas-draw.png
 featuredImg: ../images/featured/calc-banner.png
 link: https://codepen.io/
 github: https://github.com/Jay-Ferguson

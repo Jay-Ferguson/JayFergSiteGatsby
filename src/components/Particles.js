@@ -10,10 +10,10 @@ export default () => (
     <Particles params={{
       "particles":{
         "number": {
-          "value": 20,
+          "value": 15,
           "density": {
-            "enable": true,
-            "value_area": 200
+            "enable": false,
+            "value_area": 60
           }
         },
         "color": {
@@ -49,28 +49,28 @@ export default () => (
           "random": true,
           "anim": {
             "enable": false,
-            "speed": 40,
+            "speed": 10,
             "size_min": 0.1,
             "sync": false
           }
         },
         "line_linked": {
           "enable": true,
-          "distance": 200,
+          "distance": 500,
           "color": "#272727",
           "opacity": 0.4,
           "width": 1
         },
         "move": {
           "enable": true,
-          "speed": 2,
+          "speed": 1,
           "direction": "none",
           "random": true,
           "straight": false,
           "out_mode": "out",
           "bounce": true,
           "attract": {
-            "enable": false,
+            "enable": true,
             "rotateX": 200,
             "rotateY": 1500
           }
@@ -91,7 +91,7 @@ export default () => (
         },
         "modes": {
           "grab": {
-            "distance":100,
+            "distance":150,
             "line_linked": {
               "opacity":0.5
             }

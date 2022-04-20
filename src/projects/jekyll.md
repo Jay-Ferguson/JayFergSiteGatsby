@@ -2,7 +2,7 @@
 title: Jekyll business website
 stack: Liquid, Html, Scss, Bootstrap
 slug: jekyll-business-website
-thumb: '../images/thumb/penguin-landing.png'
+thumbImg: '../images/thumb/penguin-landing.png'
 featuredImg: ../images/featured/calc-banner.png
 link: https://codepen.io/
 github: https://github.com/Jay-Ferguson

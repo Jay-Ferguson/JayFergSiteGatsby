@@ -1,5 +1,4 @@
 import * as React from "react";
-import {useContext} from 'react';
 import styled from "styled-components";
 import { graphql } from "gatsby";
 import { Link } from "gatsby";
@@ -56,7 +55,7 @@ justify-content:center;
 `
 
 const HomePage = ({ data }) => {
-  const { title, description } = data.site.siteMetadata;
+  const { description } = data.site.siteMetadata;
   return (
     <Layout>
       <SectionContainer>

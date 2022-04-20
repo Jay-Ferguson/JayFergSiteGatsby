@@ -2,7 +2,7 @@
 title: Pizza Shop
 stack: Gatsby, Styled components, Sanity.io
 slug: pizza-shop
-thumb: ../images/thumb/nexter-landing-page.png
+thumbImg: ../images/thumb/nexter-landing-page.png
 featuredImg: ../images/featured/calc-banner.png
 link: https://codepen.io/
 github: https://github.com/Jay-Ferguson
