@@ -1,6 +1,6 @@
 {
   "name": "my-gatsby-site",
-  "version": "^4.0.0",
+  "version": "4.7.0",
   "private": true,
   "description": "My Gatsby Site",
   "author": "",
@@ -28,7 +28,7 @@
     "@mdx-js/react": "^2.0.0",
     "babel-plugin-styled-components": "^2.0.6",
     "framer-motion": "^6.2.8",
-    "gatsby": "^4.9.2",
+    "gatsby": "^4.7.0",
     "gatsby-plugin-analytics": "^0.2.0",
     "gatsby-plugin-google-analytics": "^4.9.0",
     "gatsby-plugin-google-gtag": "^4.9.0",
