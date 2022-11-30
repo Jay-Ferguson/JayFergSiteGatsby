@@ -8,7 +8,7 @@ const GlobalStyles = createGlobalStyle `
      --yellow:#ffc600;
      --white:#fff;
      --grey:#efefef;
-     --gradientgrey:linear-gradient(20deg, rgba(64,64,64,1) 20%, rgba(221,221,221,1) 100%);
+     --gradientgrey:linear-gradient(20deg, rgba(64,64,64, .8) 20%, rgba(221,221,221, .9) 100%);
 
      
 }

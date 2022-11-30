@@ -12,6 +12,18 @@ const LogoStyle = styled(motion.img)`
   max-width: 10rem;
   max-height: 10rem;
   margin: 0 0 2rem 0;
+
+  @media (min-width:400px){
+   
+     
+}
+
+
+@media (min-width:600px){
+  max-width: 12rem;
+  max-height: 12rem;
+}
+
 `;
 
 export default function Logo() {

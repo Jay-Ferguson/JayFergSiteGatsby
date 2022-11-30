@@ -47,7 +47,7 @@ export default function Socials() {
       </a>
 
       <a
-        href="https://twitter.com/JayFerg39898519"
+        href="https://mobile.twitter.com/JayFerg_00"
         rel="noreferrer"
         target="_blank"
         className="social-link"

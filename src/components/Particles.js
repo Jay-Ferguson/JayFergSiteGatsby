@@ -35,7 +35,7 @@ export default () => (
           }
         },
         "opacity": {
-          "value": 0.2,
+          "value": 0.5,
           "random": false,
           "anim": {
             "enable": true,
@@ -45,11 +45,11 @@ export default () => (
           }
         },
         "size": {
-          "value": 2,
+          "value": 3,
           "random": true,
           "anim": {
             "enable": false,
-            "speed": 10,
+            "speed": 11,
             "size_min": 0.1,
             "sync": false
           }

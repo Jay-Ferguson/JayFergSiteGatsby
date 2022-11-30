@@ -29,12 +29,13 @@ const Navbox = styled(motion.div)`
   z-index: 2;
   max-width: 100%;
   min-height: 100vh;
+  overflow:hidden;
   justify-content: flex-start;
   padding-left: 4rem;
   padding-top: 10vh;
   background: linear-gradient(
-    60deg,
-    rgba(69, 69, 69, 1) 5%,
+    -60deg,
+    rgba(69, 69, 69, .9) 5%,
     rgba(221, 221, 221, 0.875) 100%
   );
   backdrop-filter: blur(5px);
@@ -53,7 +54,7 @@ const NavItem = styled(motion(Link))`
   font-weight:300;
   z-index: 6;
   margin: 0;
-  transition: all 200ms ease-in;
+  transition: all 110ms ease-in;
   position: relative;
 
   :after {
@@ -74,7 +75,6 @@ const NavItem = styled(motion(Link))`
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transform: translateX(5rem);
     transition: 0.1s linear;
     ::after {
       width: 20%;

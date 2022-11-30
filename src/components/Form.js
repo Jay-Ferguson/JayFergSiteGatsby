@@ -20,13 +20,25 @@ border:none;
 word-wrap: break-word;
 word-break: break-all;
 
+@media (min-width:600px){
+  min-width: 45rem;
+}
 
 &:active{
 
-border:none;
+border:red;
 }
 
 `
+const StyledContactP = styled.p`
+font-size:1.5rem;
+
+@media (min-width:600px){
+  font-size:2rem;
+}
+
+`
+
 const MessageInput = styled(Input)`
 height:10rem;
 `
@@ -36,10 +48,10 @@ export default function Form() {
   return (
     <>
       <IntroCard>
-        <p>
+        <StyledContactP>
           If you have a project in mind you’d like to work on, or just
           interested in talking please feel free to contact me via email.
-        </p>
+        </StyledContactP>
 
 
         <FormField

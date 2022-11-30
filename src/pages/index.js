@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import { keyframes } from "styled-components";
 import { graphql } from "gatsby";
 import { Link } from "gatsby";
 import Layout from "../components/Layout";
@@ -10,6 +11,16 @@ import "normalize.css";
 
 
 //query
+const lineStroke = keyframes`
+from{
+  width:0%;
+
+}
+
+to{
+  width:50%;
+}
+`
 
 const Line = styled.div`
   height: 2px;
@@ -17,13 +28,17 @@ const Line = styled.div`
   background-image: linear-gradient(-90deg, red, blue);
   border-radius: 30px;
   margin-bottom: 1rem;
+  animation: ${lineStroke} .7s ease-in;
+
 `;
+
+
 const LinkButton = styled(Link)`
   margin-top: 2.5rem;
   background-color: var(--grey);
   border-radius: 5px;
   width: 60%;
-  font-size:1.3rem;
+  font-size:1.5rem;
   height: 4rem;
   color: var(--black);
   display: flex;
@@ -46,6 +61,11 @@ const LinkButton = styled(Link)`
 
 const IntroText = styled.h3`
   margin-bottom: 2rem;
+
+  @media (min-width:400px){
+    font-size:1.6rem;
+  }
+  
 `;
 
 const SectionContainer = styled.section `
