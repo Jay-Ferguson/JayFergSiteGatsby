@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby";
 import Layout from "../../components/Layout";
 import styled from "styled-components";
 import { GatsbyImage } from "gatsby-plugin-image";
+import StyledTitleCard from "../../components/TitleCard";
 
 const Grid = styled.div`
 
@@ -67,8 +68,8 @@ export default function Projects({ data }) {
 
   return (
     <Layout>
-      <h2>Portfolio</h2>
-      <SubTitle>Projects I have created</SubTitle>
+      <StyledTitleCard>Portfolio</StyledTitleCard>
+      <SubTitle></SubTitle>
       <Grid>
         {projects.map((project) => (
           <GridLink to={"/projects/" + project.frontmatter.slug} key={project.id}>

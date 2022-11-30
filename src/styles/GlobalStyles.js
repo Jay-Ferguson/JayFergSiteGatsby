@@ -19,9 +19,7 @@ const GlobalStyles = createGlobalStyle `
 html {
    font-weight:normal;
    min-height:100vh;
-   
-
-  
+   font-size:62.5%;
 }
 body{
      height:100vh;

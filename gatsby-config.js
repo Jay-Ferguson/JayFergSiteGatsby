@@ -56,7 +56,7 @@ module.exports = {
   ],
   siteMetadata: {
     title: "Hello",
-    description: "Welome, thank you for visiting my website. I am a UX designer and front end web developer, working at the intersection of design and devlopement",
+    description: "Welome, and thank you for visiting my website. I am a UX designer and front end web developer, working at the intersection of design and devlopement.",
     copyright:"2021",
     contact:"jayfergusonweb@gmail.com",
     logo: "/src/images/icon-svg/j-logo.svg",

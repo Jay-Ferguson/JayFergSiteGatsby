@@ -26,7 +26,6 @@ word-break: break-all;
 
 &:active{
 
-border:red;
 }
 
 `

@@ -4,6 +4,7 @@ import Socials from "../components/Socials";
 import Layout from "../components/Layout";
 import styled from "styled-components";
 import Line from "../components/Line";
+import TitleCard from "../components/TitleCard";
 
 const StyledParagraph = styled.p`
 font-size:1.5rem;
@@ -13,27 +14,42 @@ line-height:1.5 ;
 `;
 
 const HeadingTitle = styled.h2`
-text-align:center;
+text-align:left;
 margin-bottom:.5rem;
-font-size:2rem;
+align-self:flex-start;
+margin-top:4rem;
+font-size:1.5rem;
 font-weight:400;
-text-transform:uppercase ;
+`
+
+const SubHeadingLine = styled(Line)`
+margin-top:.5rem;
+width:100%;
 `
 
 const about = () => {
      return (
           <Layout>
+               <TitleCard>
+               About
+               </TitleCard>
           <IntroCard>
-               <HeadingTitle>About</HeadingTitle>
-               <Line></Line>
+          <HeadingTitle>
+               Get To Know Me
+               <SubHeadingLine></SubHeadingLine>
+               </HeadingTitle>
                <StyledParagraph>  
                     I am a front end web developer and UX designer from Ottawa Canada. 
                     I am passionate about creating modern designs, to fit your business's requirements. 
                     Whether using tools like Shopify or Wordpress, or building site from scratch. 
-                    I help brands stand out online with performant, intuitive designs. Sharing your brand with the online world.
+                    I help brands stand out online with performant, intuitive designs. Sharing your brand with the online world. 
+                    I am interested in creating highly engaging digital experiences that allow users to utilize the web to it's full 
+                    capabillity. If you would like to know more, you can check out my twitter or send me an email, even just to chat. 
                </StyledParagraph>
-               <HeadingTitle>SkillSet</HeadingTitle>
-               <Line></Line>
+               <HeadingTitle>
+               Skill  Set & Experience
+               <SubHeadingLine></SubHeadingLine>
+               </HeadingTitle>
                <StyledParagraph>
                     With knowledge of design and development tools I am able to communicate effectively with both graphic designers 
                     as well as web developers as a team, I have experience using the Adobe CC suite and using web development frameworks.
