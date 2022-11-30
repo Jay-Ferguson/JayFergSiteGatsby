@@ -17,7 +17,7 @@ align-self: center;
 display:flex;
 flex-flow:column;
 align-items: center;
-width:10rem;
+max-width:50rem;
 margin-bottom:2rem;
 padding:2rem;
 background: rgba( 77, 77, 77, 0.90 );
@@ -28,7 +28,8 @@ border-radius: 5px;
 border: 1px solid rgba( 200, 200, 255, .1 );
 
 @media (min-width:400px){
-     width:30rem;
+     min-width:25rem;
+     max-width:30rem;
      
 }
 

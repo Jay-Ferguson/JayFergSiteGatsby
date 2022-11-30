@@ -18,7 +18,7 @@ const Line = styled.div`
   background-image: linear-gradient(-90deg, red, blue);
   border-radius: 30px;
   margin-bottom: 1rem;
-  animation: ${lineStroke} .7s ease-in;
+  animation: ${lineStroke} .7s ease-in-out;
 
 `;
 

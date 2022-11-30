@@ -29,6 +29,9 @@ font-size: 1.5rem;
 const PDetails = styled.div`
   text-align: center;
   padding: 0 2rem 0 2rem;
+  max-width:55rem;
+  align-self:center ;
+  justify-self:center;
 `
 
 const ButtonsContainer = styled.div`

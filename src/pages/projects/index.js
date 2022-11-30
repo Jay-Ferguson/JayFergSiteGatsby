@@ -6,7 +6,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import StyledTitleCard from "../../components/TitleCard";
 
 const Grid = styled.div`
-
+  max-width:110rem;
   width: 90%;
   margin: 0 auto;
   display: grid;
@@ -27,7 +27,7 @@ const GridLink = styled(Link)`
 
 const GridCard = styled.div`
   width: 100%;
-  height: 25rem;
+  min-height: 25rem;
   padding: 2rem 0 2rem 0;
   background: rgba(64, 64, 64, 0.5);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);

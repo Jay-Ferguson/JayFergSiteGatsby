@@ -26,7 +26,7 @@ const Navbox = styled(motion.div)`
   display: flex;
   flex-direction: column;
   position: relative;
-  z-index: 2;
+  z-index: 20;
   max-width: 100%;
   min-height: 100vh;
   overflow:hidden;

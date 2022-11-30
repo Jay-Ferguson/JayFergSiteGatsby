@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 const StyledParticle = styled.div`
 max-height:13rem;
+z-index:1;
 `
 export default () => (
   <StyledParticle>

@@ -21,6 +21,10 @@ p, li {
      font-size: 1.5rem;
      font-weight: 150;
 
+     @media screen and (min-width: 600px) {
+          font-size:2rem;
+  }
+
 }
 
 

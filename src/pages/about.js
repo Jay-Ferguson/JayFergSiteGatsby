@@ -27,6 +27,14 @@ margin-top:.5rem;
 width:100%;
 `
 
+const SubHeadingText = styled.h5`
+display:block;
+font-size:1.5rem;
+margin-bottom:.5rem;
+text-align:left;
+font-weight:400;
+`
+
 const about = () => {
      return (
           <Layout>
@@ -39,9 +47,16 @@ const about = () => {
                <SubHeadingLine></SubHeadingLine>
                </HeadingTitle>
                <StyledParagraph>  
-                    I am a front end web developer and UX designer from Ottawa Canada. 
-                    I am passionate about creating modern designs, to fit your business's requirements. 
-                    Whether using tools like Shopify or Wordpress, or building site from scratch. 
+                    <SubHeadingText>
+                    I am a front end web developer & UX designer from Canada🇨🇦.
+                    </SubHeadingText>
+
+                     I am passionate about creating modern designs, to fit your business's requirements. 
+                    Creating optimal user experiences requires a lot of communication, and weighing the pros and cons of specific approaches.
+                    Whether using tools like Shopify or Wordpress, or building a solution from scratch.
+                    I can comminicate with non technical and technical people about the best appraoches for their particular context. 
+                    
+                    
                     I help brands stand out online with performant, intuitive designs. Sharing your brand with the online world. 
                     I am interested in creating highly engaging digital experiences that allow users to utilize the web to it's full 
                     capabillity. If you would like to know more, you can check out my twitter or send me an email, even just to chat. 
@@ -51,14 +66,17 @@ const about = () => {
                <SubHeadingLine></SubHeadingLine>
                </HeadingTitle>
                <StyledParagraph>
-                    With knowledge of design and development tools I am able to communicate effectively with both graphic designers 
-                    as well as web developers as a team, I have experience using the Adobe CC suite and using web development frameworks.
-                    Some of the tools I have used, Jekyll, 11ty, Gatsby, Next, Wordpress, Sanity.io and Shopify.
+               <SubHeadingText>
+                    Ultimately the web is about communicating ideas.
+               </SubHeadingText>
+                    With knowledge of design and development tools I am able to communicate effectively with designers, 
+                    developers, and clients. With my experience using the Adobe CC suite and using web development frameworks.
+                    Some of the tools I have used, Jekyll, 11ty, Gatsby, Next, Wordpress, Sanity.io and Shopify. 
 
                     Using CSS BEM methodology I create layouts with Grid and flexbox to ensure they are designed to spec
                     on all devices and modern browsers. I have experience using SCSS, styled components, Bootstrap and Tailwind.
                     To see more of my other projects or just to learn more about me, 
-                    check out my social links below or send me an email. 
+                    check out my social links below.
                </StyledParagraph>
 
                     <Socials></Socials>
