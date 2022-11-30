@@ -62,7 +62,7 @@ const about = () => {
                     capabillity. If you would like to know more, you can check out my twitter or send me an email, even just to chat. 
                </StyledParagraph>
                <HeadingTitle>
-               Skill  Set & Experience
+               Skill Set & Experience
                <SubHeadingLine></SubHeadingLine>
                </HeadingTitle>
                <StyledParagraph>
