@@ -14,6 +14,7 @@ const StyledLayout = styled.div`
   flex-flow: column;
   min-height: 100%;
   width: 100vw;
+  overflow-x:hidden;
 `;
 const Heading = styled.header`
   min-height: 10rem;

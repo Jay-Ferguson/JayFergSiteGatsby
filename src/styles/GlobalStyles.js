@@ -46,6 +46,10 @@ button {
      border: none;
      justify-content: center;
 }
+
+.introMessage{
+     font-size:3rem;
+}
 `
 
 export default GlobalStyles;

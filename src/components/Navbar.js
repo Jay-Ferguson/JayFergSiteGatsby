@@ -35,7 +35,7 @@ const Navbox = styled(motion.div)`
   background: linear-gradient(
     60deg,
     rgba(69, 69, 69, 1) 5%,
-    rgba(221, 221, 221, 0.17130602240896353) 100%
+    rgba(221, 221, 221, 0.875) 100%
   );
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(16px);
@@ -49,8 +49,8 @@ const NavItem = styled(motion(Link))`
   white-space: nowrap;
   letter-spacing: 0.5rem;
   padding: 20px 0;
-  font-size: 4.5rem;
-  font-weight:200;
+  font-size: 5.5rem;
+  font-weight:300;
   z-index: 6;
   margin: 0;
   transition: all 200ms ease-in;
@@ -129,8 +129,8 @@ const container = {
     x: 0,
     transition: {
       type: "tween",
-      duration: 0.25,
-      staggerChildren: 0.15,
+      duration: 0.20,
+      staggerChildren: 0.10,
     },
   },
 };

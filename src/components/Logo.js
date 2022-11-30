@@ -9,8 +9,8 @@ const LogoStyle = styled(motion.img)`
   z-index: 1;
   top: 10rem;
   left: 20px;
-  max-width: 8rem;
-  max-height: 8rem;
+  max-width: 10rem;
+  max-height: 10rem;
   margin: 0 0 2rem 0;
 `;
 
