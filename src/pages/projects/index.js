@@ -74,9 +74,6 @@ export default function Projects({ data }) {
         {projects.map((project) => (
           <GridLink to={"/projects/" + project.frontmatter.slug} key={project.id}>
             <GridCard
-              data-sal="fade"
-              data-sal-delay="300"
-              data-sal-easing="ease"
             >
               <GatsbyImage
                 image={project.frontmatter.thumbImg.childImageSharp.gatsbyImageData}
