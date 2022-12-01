@@ -5,9 +5,9 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Logo from "../components/Logo";
 import MouseContextProvider from "../context/mouse-context";
-import Particles from "../components/Particles";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import ParticlesBg from "./ParticlesBg";
 
 const StyledLayout = styled.div`
   display: flex;
@@ -45,7 +45,7 @@ export default function Layout({ children }) {
         <Heading>
           <Navbar />
           <Logo />
-          <Particles />
+          <ParticlesBg />
         </Heading>
         <Content
           initial={{ opacity: 0, x: 200 }}

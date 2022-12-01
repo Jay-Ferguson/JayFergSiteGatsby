@@ -27,7 +27,7 @@ const GridLink = styled(Link)`
 
 const GridCard = styled.div`
   width: 100%;
-  min-height: 25rem;
+  height: 30rem;
   padding: 2rem 0 2rem 0;
   background: rgba(64, 64, 64, 0.5);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
