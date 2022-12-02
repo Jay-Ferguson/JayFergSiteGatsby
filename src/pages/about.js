@@ -72,12 +72,13 @@ transition:.2s ease-in;
 
 &::before {
   content: '';
-  background-color: #ff49498e;
+  /* background-color: #ff49498e; */
+  background:linear-gradient(70deg, rgba(197,15,15,.5) 33%, rgba(23,0,255,.5) 60%);
   position: absolute;
   left: 0;
-  bottom: 3px;
+  bottom: 4px;
   width: 100%;
-  height: 2px;
+  height: .5px;
   z-index: -1;
   transition: all .3s ease-in-out;
 }
