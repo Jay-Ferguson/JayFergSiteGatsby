@@ -8,7 +8,6 @@ const StyledTitle = styled.h2`
 font-size:3rem;
 margin-bottom:1rem;
 font-weight:400;
-text-transform:uppercase ;
 `
 
 const TitleCards = styled.div`

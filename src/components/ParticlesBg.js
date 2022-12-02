@@ -76,7 +76,7 @@ function ParticlesBg() {
                       "onHover": {
                         "enable": true,
                         "mode": "grab",
-                        "distance":500,
+                        "distance":800,
                         "parallax": {
                           "enable": true,
                           "force": 15,

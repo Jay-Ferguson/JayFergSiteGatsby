@@ -27,7 +27,7 @@ text-align:left;
 margin-bottom:.5rem;
 align-self:flex-start;
 margin-top:4rem;
-font-size:3.5rem;
+font-size:2.2rem;
 font-weight:400;
 
 @media (min-width:400px){
@@ -37,7 +37,7 @@ font-weight:400;
 
 
 @media (min-width:600px){
-     font-size:2.5rem;
+     font-size:3rem;
 }
 `
 
@@ -65,10 +65,31 @@ font-weight:400;
 `
 
 const ParagraphLink = styled.a`
+text-decoration: none;
+position: relative;
 border-bottom:solid 1px white;
+transition:.2s ease-in;
+
+&::before {
+  content: '';
+  background-color: #ff49498e;
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  height: 2px;
+  z-index: -1;
+  transition: all .3s ease-in-out;
+}
+
+&:hover::before {
+  bottom: 0;
+  height: 100%;
+}
 
 &:hover{
-padding-bottom:1rem;
+padding-bottom:.2rem;
+transition:.2s ease-in;
 }
 `
 

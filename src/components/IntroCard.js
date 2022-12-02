@@ -18,14 +18,13 @@ border-radius: 5px;
 border: 1px solid rgba( 200, 200, 255, .1 );
 
 @media (min-width:400px){
-     width:30rem;
-     
+     width:35rem;
 }
 
 
 @media (min-width:600px){
      width:60rem;
-     
+     margin-top:5rem;
 }
 `
 
