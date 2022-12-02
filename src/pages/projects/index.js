@@ -50,8 +50,8 @@ const GridCard = styled.div`
 `;
 const StyledH3 = styled.h3`
   margin-top: 1rem;
-  font-size: 2rem;
-  font-weight: 100;
+  font-size: 2.2rem;
+  font-weight: 200;
 `;
 
 const SubTitle = styled.h3`
@@ -59,7 +59,8 @@ margin-bottom:4rem;
 `
 
 const Stack = styled.p`
-  font-size: 1.2rem;
+  font-size: 1.8rem;
+  font-weight:100;
   text-align: center;
 `;
 export default function Projects({ data }) {

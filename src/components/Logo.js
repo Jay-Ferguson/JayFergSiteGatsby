@@ -13,6 +13,10 @@ const LogoStyle = styled(motion.img)`
   max-height: 10rem;
   margin: 0 0 2rem 0;
 
+  &:hover{
+   transform:translateY(10px) ;
+  }
+
   @media (min-width:400px){
    
      
@@ -20,8 +24,12 @@ const LogoStyle = styled(motion.img)`
 
 
 @media (min-width:600px){
-  max-width: 12rem;
-  max-height: 12rem;
+  max-width: 15rem;
+  max-height: 15rem;
+
+  &:hover{
+    width:16rem;
+  }
 }
 
 `;

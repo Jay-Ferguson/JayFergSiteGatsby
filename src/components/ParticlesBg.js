@@ -76,6 +76,7 @@ function ParticlesBg() {
                       "onHover": {
                         "enable": true,
                         "mode": "grab",
+                        "distance":500,
                         "parallax": {
                           "enable": true,
                           "force": 15,
@@ -240,7 +241,7 @@ function ParticlesBg() {
                         "horizontal": {
                           "random": {
                             "enable": false,
-                            "minimumValue": 0.1
+                            "minimumValue": 0.1 
                           },
                           "value": 1
                         },
@@ -255,7 +256,7 @@ function ParticlesBg() {
                       "enable": true,
                       "mode": "bounce",
                       "overlap": {
-                        "enable": true,
+                        "enable": false,
                         "retries": 0
                       }
                     },
@@ -413,7 +414,7 @@ function ParticlesBg() {
                       "animation": {
                         "count": 0,
                         "enable": true,
-                        "speed": 3,
+                        "speed": 2,
                         "decay": 0,
                         "sync": false,
                         "destroy": "none",

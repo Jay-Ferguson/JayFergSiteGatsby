@@ -7,7 +7,7 @@ align-self: center;
 display:flex;
 flex-flow:column;
 align-items: center;
-width:24rem;
+width:25rem;
 margin-bottom:5rem;
 padding:3rem;
 background: rgba( 77, 77, 77, 0.80 );
@@ -24,7 +24,7 @@ border: 1px solid rgba( 200, 200, 255, .1 );
 
 
 @media (min-width:600px){
-     width:45rem;
+     width:60rem;
      
 }
 `

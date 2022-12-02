@@ -5,9 +5,8 @@ import styled from 'styled-components'
 
 
 const StyledTitle = styled.h2`
-font-size:2rem;
+font-size:3rem;
 margin-bottom:1rem;
-font-size:2rem;
 font-weight:400;
 text-transform:uppercase ;
 `

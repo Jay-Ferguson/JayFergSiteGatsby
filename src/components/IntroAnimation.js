@@ -1,5 +1,13 @@
 import React from 'react';
 import { motion }  from 'framer-motion';
+import styled from 'styled-components';
+
+const HelloHeader = styled(motion.h2)`
+font-size:4rem;
+letter-spacing:.5rem;
+text-transform:uppercase ;
+`
+
 
 const hello = "Hello";
 
@@ -8,14 +16,14 @@ const hello = "Hello";
       visible:{
            opacity: 1,
            transition:{
-                delay:0.5,
-                staggerChildren:0.1,
+                delay:1,
+                staggerChildren:.22,
            },
       },
  }
 
  const letter = {
-      hidden:{opacity:0, y: 50},
+      hidden:{opacity:0, y: 50 },
       visible:{
            opacity: 1,
            y:0,
@@ -24,7 +32,7 @@ const hello = "Hello";
  
 export default function IntroAnimation() {
      return (
-          <motion.h2
+          <HelloHeader
           className="introMessage"
           variants ={sentence}
           initial="hidden"
@@ -38,7 +46,7 @@ export default function IntroAnimation() {
            </motion.span>
       )
  })}
-          </motion.h2>
+          </HelloHeader>
      )
 }
 

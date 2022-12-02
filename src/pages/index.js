@@ -61,9 +61,10 @@ const LinkButton = styled(Link)`
 
 const IntroText = styled.h3`
   margin-bottom: 2rem;
+  font-size:1.5rem;
 
-  @media (min-width:400px){
-    font-size:1.6rem;
+  @media (min-width:600px){
+    font-size:2rem;
   }
   
 `;
