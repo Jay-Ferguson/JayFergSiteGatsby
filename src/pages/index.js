@@ -1,4 +1,5 @@
 import * as React from "react";
+import Head from "../shared/Head";
 import styled from "styled-components";
 import { keyframes } from "styled-components";
 import { graphql } from "gatsby";
@@ -79,6 +80,7 @@ const HomePage = ({ data }) => {
   const { description } = data.site.siteMetadata;
   return (
     <Layout>
+      <Head />
       <SectionContainer>
         <IntroCard>
           {/* <h1>{title}</h1> */}
