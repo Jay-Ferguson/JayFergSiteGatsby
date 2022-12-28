@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useRef } from "react";
+import { navigate } from "gatsby";
 import styled from "styled-components";
 import IntroCard from "../components/IntroCard";
 import ExternalButton from "../components/ExternalButton";
@@ -7,12 +8,39 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useEffect } from "react";
 
+const StyledReCAPTCHA = styled(ReCAPTCHA)`
+margin-top:4rem;
+align-self:center ;
+
+`
+
 const FormField = styled(Form)`
   display: flex;
   flex-flow: column;
   padding: 2rem;
   align-self: center;
 `;
+
+const StyledField = styled(Field)`
+  border-radius: 10px;
+  width: 25rem;
+  height: 2rem;
+  margin: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border: none;
+  word-wrap: break-word;
+  word-break: break-all;
+
+  @media (min-width: 600px) {
+    min-width: 45rem;
+  }
+`;
+
+const StyledErrorMessage = styled(ErrorMessage)`
+font-size:1.5rem;
+margin-left:1.5rem;
+color:white;
+`
 
 const Input = styled.input`
   border-radius: 10px;
@@ -53,12 +81,12 @@ export default function ContactForm() {
   const [token, setToken] = useState(null);
 
   useEffect(() => {
-     const script = document.createElement("script")
-     script.src = "https://www.google.com/recaptcha/api.js"
-     script.async = true
-     script.defer = true
-     document.body.appendChild(script)
-  }, [])
+    const script = document.createElement("script");
+    script.src = "https://www.google.com/recaptcha/api.js";
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+  }, []);
 
   return (
     <IntroCard>
@@ -72,33 +100,38 @@ export default function ContactForm() {
         validate={(values) => {
           const errors = {};
           if (!values.fullName) {
-            errors.fullName = "required";
+            errors.fullName = "please enter all information";
           } else if (values.fullName.length <= 1) {
             errors.fullName = "must be at least 2 characters";
           }
           if (!values.email) {
-            errors.email = "Required";
+            errors.email = "please enter required fields";
           } else if (
             !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
           ) {
-            errors.email = "Invalid email address";
+            errors.email = "please enter a valid email address";
           }
           return errors;
         }}
-        onSubmit={(data) => {
-          fetch("/", {
-            method: "POST",
-            headers: { "Content-type": "application/" },
-            body: encode({
-              "form-name": "contact",
-              ...data,
-                  "g-recaptcha-response":token,
-            }),
-          })
-            .then(() => {
-              alert("send");
+        onSubmit={(data, { resetForm }) => {
+          console.log(data);
+          if (token !== null) {
+            fetch("/", {
+              method: "POST",
+              headers: { "Content-type": "application/" },
+              body: encode({
+                "form-name": "contact",
+                ...data,
+                "g-recaptcha-response": token,
+              }),
             })
-            .catch((error) => alert(error));
+              .then(() => {
+                resetForm();
+                navigate("/formsubmission/");
+                alert("send");
+              })
+              .catch((error) => alert(error));
+          }
         }}
       >
         <FormField
@@ -111,27 +144,31 @@ export default function ContactForm() {
           <Field type="hidden" name="form-name" />
           <Field type="hidden" name="bot-field" />
 
-          <label htmlFor="fullName">Full name:</label>
-          <Field name="fullName" type="text" />
-          <ErrorMessage name="fullName" />
+          <label htmlFor="fullName" style={{ marginLeft: "1rem" }}>
+            Full name*{" "}
+          </label>
+          <StyledField name="fullName" type="text" placeholder="name" />
+          <StyledErrorMessage name="fullName" component="p" />
           <br></br>
-          <label htmlFor="email">Email</label>
-          <Field name="email" type="text" />
-          <ErrorMessage name="email"></ErrorMessage>
+          <label htmlFor="email" style={{ marginLeft: "1rem" }}>
+            Email*
+          </label>
+          <StyledField name="email" type="text" placeholder="email" />
+          <StyledErrorMessage name="email" component="p"></StyledErrorMessage>
           <br></br>
 
-          <input type="hidden" name="bot-field" />
-          <input type="hidden" name="form-name" value="contact" />
+          {/* <input type="hidden" name="bot-field" />
+          <input type="hidden" name="form-name" value="contact" /> */}
 
-          <label htmlFor="email">
+          {/* <label htmlFor="email">
             <Input type="email" name="email" placeholder="Email" />
           </label>
 
           <label htmlFor="name">
             <Input type="text" name="name" placeholder="Name" />
-          </label>
+          </label> */}
 
-{/* ok then */}
+          {/* ok then */}
 
           <label htmlFor="message">
             <MessageInput
@@ -141,7 +178,9 @@ export default function ContactForm() {
               placeholder="Message"
             />
           </label>
-          <ReCAPTCHA
+
+          <StyledReCAPTCHA
+            //   sitekey={process.env.SITE_RECAPTCHA_KEY}
             sitekey={process.env.SITE_RECAPTCHA_KEY}
             render="explicit"
             theme="dark"
