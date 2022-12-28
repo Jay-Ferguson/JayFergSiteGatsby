@@ -5,7 +5,6 @@ import IntroCard from "../components/IntroCard";
 import ExternalButton from "../components/ExternalButton";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import ReCAPTCHA from "react-google-recaptcha";
-import { tokenToString } from "typescript";
 import { useEffect } from "react";
 
 const FormField = styled(Form)`
