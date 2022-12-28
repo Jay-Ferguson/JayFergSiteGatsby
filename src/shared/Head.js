@@ -4,6 +4,7 @@ import Helmet from "react-helmet";
 
 export default () => (
   <Helmet htmlAttributes={{ lang: "en-GB", title: "Jay's Site" }}>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <meta
       name="description"
       content="My website for webdev, UX and anything else on my mind "

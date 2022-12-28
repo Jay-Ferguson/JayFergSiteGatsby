@@ -9,10 +9,9 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { useEffect } from "react";
 
 const StyledReCAPTCHA = styled(ReCAPTCHA)`
-margin-top:4rem;
-align-self:center ;
-
-`
+  margin-top: 4rem;
+  align-self: center;
+`;
 
 const FormField = styled(Form)`
   display: flex;
@@ -37,10 +36,10 @@ const StyledField = styled(Field)`
 `;
 
 const StyledErrorMessage = styled(ErrorMessage)`
-font-size:1.5rem;
-margin-left:1.5rem;
-color:white;
-`
+  font-size: 1.5rem;
+  margin-left: 1.5rem;
+  color: white;
+`;
 
 const Input = styled.input`
   border-radius: 10px;
@@ -91,8 +90,7 @@ export default function ContactForm() {
   return (
     <IntroCard>
       <StyledContactP>
-        If you have a project in mind you’d like to work on, or just interested
-        in talking please feel free to contact me via email.
+        Thank you for reaching out! You will hear from me soon.
       </StyledContactP>
 
       <Formik
@@ -158,7 +156,6 @@ export default function ContactForm() {
           <StyledField name="email" type="text" placeholder="email" />
           <StyledErrorMessage name="email" component="p"></StyledErrorMessage>
           <br></br>
-
 
           <label htmlFor="message">
             <MessageInput
