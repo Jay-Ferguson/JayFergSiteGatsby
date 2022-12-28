@@ -132,6 +132,8 @@ export default function ContactForm() {
             <Input type="text" name="name" placeholder="Name" />
           </label>
 
+{/* ok then */}
+
           <label htmlFor="message">
             <MessageInput
               as="textarea"
@@ -148,7 +150,7 @@ export default function ContactForm() {
               setToken(response);
             }}
             onloadCallback={() => {
-              console.log("done loading!");
+              console.log("done loading form call back api call!");
             }}
           />
 
