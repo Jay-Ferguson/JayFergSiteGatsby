@@ -1,6 +1,6 @@
 import * as React from "react"
 import IntroCard from "../components/IntroCard";
-import Socials from "../components/Socials";
+
 import Layout from "../components/Layout";
 import styled from "styled-components";
 import Line from "../components/Line";
@@ -139,8 +139,6 @@ const about = () => {
                     To see more of my other projects or just to learn more about me, 
                     check out my social links below.
                </StyledParagraph>
-
-                    <Socials></Socials>
           </IntroCard>
           
           </Layout>

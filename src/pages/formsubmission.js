@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import StyledTitleCard from "../components/TitleCard";
 import ContactForm from "../components/ContactForm";
 
-export default function formsubmission() {
+const formsubmission = () => {
   return (
     <Layout>
       <StyledTitleCard>Thank you for reaching out!</StyledTitleCard>
@@ -12,4 +12,6 @@ export default function formsubmission() {
       <ContactForm></ContactForm>
     </Layout>
   );
-}
+};
+
+export default formsubmission;

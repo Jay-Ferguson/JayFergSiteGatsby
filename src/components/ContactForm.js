@@ -89,7 +89,7 @@ export default function ContactForm() {
   }, []);
 
   return (
-    <IntroCard>
+    <>
       <StyledContactP>
         If you have a project in mind you’d like to work on, or just interested
         in talking please feel free to contact me via email.
@@ -127,8 +127,7 @@ export default function ContactForm() {
             })
               .then(() => {
                 resetForm();
-                navigate(-1);
-                alert("send");
+                navigate(`../pages/success.js`);
               })
               .catch((error) => alert(error));
           }
@@ -138,8 +137,8 @@ export default function ContactForm() {
           name="contact"
           method="post"
           data-netlify-honeypot="bot-field"
-          action="/success/"
-          onSubmit="submit"
+          // action="/success/"
+          // onSubmit="submit"
           data-netlify="true"
           data-netlify-ReCAPTCHA="true"
         >
@@ -158,7 +157,6 @@ export default function ContactForm() {
           <StyledField name="email" type="text" placeholder="email" />
           <StyledErrorMessage name="email" component="p"></StyledErrorMessage>
           <br></br>
-
 
           <label htmlFor="message">
             <MessageInput
@@ -183,10 +181,10 @@ export default function ContactForm() {
           />
 
           <ExternalButton type="submit" href="">
-            Send your email
+            Send email
           </ExternalButton>
         </FormField>
       </Formik>
-    </IntroCard>
+    </>
   );
 }

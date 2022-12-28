@@ -61,7 +61,7 @@ module.exports = {
   siteMetadata: {
     title: "Jay' Personal Site",
     description: "Welome, and thank you for visiting my corner of the internet. I am a UX designer and front end web developer, interested in working at the intersection of design and devlopement.",
-    copyright:"2021",
+    copyright:"2022",
     contact:"jayfergusonweb@gmail.com",
     logo: "/src/images/icon-svg/j-logo.svg",
     img:"/src/images/",

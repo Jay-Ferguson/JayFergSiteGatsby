@@ -41,6 +41,7 @@ export default function Socials() {
         href="https://www.behance.net/JayF"
         rel="noreferrer"
         target="_blank"
+        title="Behance"
         className="social-link"
       >
         <SocialIcon src={behanceLogo} alt="behance" className="social-icon" />
@@ -52,7 +53,12 @@ export default function Socials() {
         target="_blank"
         className="social-link"
       >
-        <SocialIcon src={twitterLogo} alt="twitter" className="social-icon" />
+        <SocialIcon
+          src={twitterLogo}
+          alt="twitter"
+          title="Twitter"
+          className="social-icon"
+        />
       </a>
 
       <a
@@ -61,7 +67,12 @@ export default function Socials() {
         target="_blank"
         className="social-link"
       >
-        <SocialIcon src={codeLogo} alt="codepen" className="social-icon" />
+        <SocialIcon
+          src={codeLogo}
+          alt="codepen"
+          title="Codepen"
+          className="social-icon"
+        />
       </a>
 
       <a
@@ -70,7 +81,12 @@ export default function Socials() {
         target="_blank"
         className="social-link"
       >
-        <SocialIcon src={GithubLogo} alt="github" className="social-icon" />
+        <SocialIcon
+          src={GithubLogo}
+          alt="github"
+          title="Github"
+          className="social-icon"
+        />
       </a>
     </SocialContainer>
   );

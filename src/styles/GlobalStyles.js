@@ -31,7 +31,7 @@ h1{
      letter-spacing: 0.2rem;
 }
 a{
-     color:var(--white);
+     color:var(--black);
 }
 
 button {

@@ -32,7 +32,7 @@ const ExternalButtons = styled.button`
 
 const ExternalButton = ({children}) => {
      return (
-          <ExternalButtons role="button" href={children}>
+          <ExternalButtons role="button" href={children} type="submit">
                {children}
           </ExternalButtons>
      )
