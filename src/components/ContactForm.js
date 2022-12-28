@@ -183,7 +183,7 @@ export default function ContactForm() {
           />
 
           <ExternalButton type="submit" href="">
-            Send
+            Send your email
           </ExternalButton>
         </FormField>
       </Formik>
