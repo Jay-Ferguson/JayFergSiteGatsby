@@ -157,18 +157,6 @@ export default function ContactForm() {
           <StyledErrorMessage name="email" component="p"></StyledErrorMessage>
           <br></br>
 
-          {/* <input type="hidden" name="bot-field" />
-          <input type="hidden" name="form-name" value="contact" /> */}
-
-          {/* <label htmlFor="email">
-            <Input type="email" name="email" placeholder="Email" />
-          </label>
-
-          <label htmlFor="name">
-            <Input type="text" name="name" placeholder="Name" />
-          </label> */}
-
-          {/* ok then */}
 
           <label htmlFor="message">
             <MessageInput
