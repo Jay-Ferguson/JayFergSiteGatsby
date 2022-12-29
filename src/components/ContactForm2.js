@@ -135,7 +135,7 @@ function ContactForm() {
             })
               .then(() => {
                 resetForm();
-                navigate("/thanks/");
+                navigate("../pages/success.js");
                 alert("send");
               })
               .catch((error) => alert(error));
