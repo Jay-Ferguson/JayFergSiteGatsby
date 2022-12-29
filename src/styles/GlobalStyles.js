@@ -1,7 +1,7 @@
 import {createGlobalStyle} from 'styled-components';
 
 
-const GlobalStyles = createGlobalStyle `
+const GlobalStyles = createGlobalStyle`
 :root {
      --red:#ff4949;
      --black:#2e2e2e;
@@ -23,6 +23,10 @@ html {
 }
 body{
      height:100vh;
+}
+
+#g-recaptcha{
+     align-self:center;
 }
 
 h1{
@@ -48,6 +52,6 @@ button {
 .introMessage{
      font-size:3rem;
 }
-`
+`;
 
 export default GlobalStyles;

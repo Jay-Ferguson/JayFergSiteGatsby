@@ -1,7 +1,7 @@
 import * as React from "react";
 import Head from "../shared/Head";
 import styled from "styled-components";
-import { Script } from "gatsby"
+// import { Script } from "gatsby"
 import { keyframes } from "styled-components";
 import { graphql } from "gatsby";
 import { Link } from "gatsby";
@@ -96,7 +96,7 @@ const HomePage = ({ data }) => {
           </LinkButton>
         </IntroCard>
       </SectionContainer>
-    <Script src="../components/Script.js"></Script>
+    {/* <Script src="../components/Script.js"></Script> */}
     </Layout>
   );
 };

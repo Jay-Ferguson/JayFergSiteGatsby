@@ -54,7 +54,7 @@ const NavItem = styled(motion(Link))`
   font-weight:300;
   z-index: 6;
   margin: 0;
-  transition: all 110ms ease-in;
+  transition: all 100ms ease-in;
   position: relative;
 
   :after {
@@ -129,8 +129,8 @@ const container = {
     x: 0,
     transition: {
       type: "tween",
-      duration: 0.20,
-      staggerChildren: 0.10,
+      duration: 0.25,
+      staggerChildren: 0.15,
     },
   },
 };

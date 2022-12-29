@@ -21,17 +21,16 @@ const SocialContainer = styled.div`
 `;
 
 const SocialIcon = styled.img`
-height:25px; 
-width:25px;
-fill:#0f0f0f;
-background-color: transparent;
-transition: all.5s;
+  height: 25px;
+  width: 25px;
+  fill: #0f0f0f;
+  background-color: transparent;
+  transition: all.5s;
 
-
-&:hover {
-     height:30px;
-     width:30px;
-}
+  &:hover {
+    height: 30px;
+    width: 30px;
+  }
 `;
 
 export default function Socials() {

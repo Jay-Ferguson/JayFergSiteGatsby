@@ -8,68 +8,7 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useEffect } from "react";
 
-const StyledReCAPTCHA = styled(ReCAPTCHA)`
-margin-top:4rem;
-align-self:center ;
 
-`
-
-const FormField = styled(Form)`
-  display: flex;
-  flex-flow: column;
-  padding: 2rem;
-  align-self: center;
-`;
-
-const StyledField = styled(Field)`
-  border-radius: 10px;
-  width: 25rem;
-  height: 2rem;
-  margin: 1rem;
-  padding: 0.5rem 1rem 0.5rem 1rem;
-  border: none;
-  word-wrap: break-word;
-  word-break: break-all;
-
-  @media (min-width: 600px) {
-    min-width: 45rem;
-  }
-`;
-
-const StyledErrorMessage = styled(ErrorMessage)`
-font-size:1.5rem;
-margin-left:1.5rem;
-color:white;
-`
-
-const Input = styled.input`
-  border-radius: 10px;
-  width: 25rem;
-  height: 2rem;
-  margin: 1rem;
-  padding: 0.5rem 1rem 0.5rem 1rem;
-  border: none;
-  word-wrap: break-word;
-  word-break: break-all;
-
-  @media (min-width: 600px) {
-    min-width: 45rem;
-  }
-
-  &:active {
-  }
-`;
-const StyledContactP = styled.p`
-  font-size: 1.5rem;
-
-  @media (min-width: 600px) {
-    font-size: 2rem;
-  }
-`;
-
-const MessageInput = styled(Input)`
-  height: 10rem;
-`;
 
 const encode = (data) => {
   return Object.keys(data)
@@ -90,13 +29,10 @@ export default function ContactForm() {
 
   return (
     <>
-      <StyledContactP>
-        If you have a project in mind you’d like to work on, or just interested
-        in talking please feel free to contact me via email.
-      </StyledContactP>
+ 
 
       <Formik
-        initialValues={{ function: "", email: "" }}
+        initialValues={{ fullName: "", email: "", message: "" }}
         validate={(values) => {
           const errors = {};
           if (!values.fullName) {
@@ -110,6 +46,10 @@ export default function ContactForm() {
             !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
           ) {
             errors.email = "please enter a valid email address";
+          } if (!values.message) {
+            errors.messsage = "a message is required";
+          } else if (values.message.length <= 1) {
+            errors.message = "message must be at least 2 characters";
           }
           return errors;
         }}
@@ -176,7 +116,7 @@ export default function ContactForm() {
               setToken(response);
             }}
             onloadCallback={() => {
-              console.log("done loading form call back api call!");
+              console.log("done api response!");
             }}
           />
 
