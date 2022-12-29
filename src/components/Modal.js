@@ -38,7 +38,7 @@ const backdrop = {
 
 const Modal = ({showModal, setShowModal}) => {
      return (
-          <AnimatePresence exitBeforeEnter>
+          <AnimatePresence mode="wait">
                {showModal && (
                     <motion.div className="backdrop"
                     variants={backdrop}

@@ -45,8 +45,8 @@ margin:0 auto;
 `
 
 export default function ProjectDetails({ data }) {
-  const { html } = data.markdownRemark;
-  const { title, stack, featuredImg, link, github } = data.markdownRemark.frontmatter;
+  const { html } = data.mdx;
+  const { title, stack, featuredImg, link, github } = data.mdx.frontmatter;
   const image = getImage(featuredImg.childImageSharp);
   console.log(github);
   return (
@@ -78,8 +78,8 @@ export default function ProjectDetails({ data }) {
 
 export const query = graphql`
   query ProjectsDetails($slug: String) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-      html
+    mdx(frontmatter: { slug: { eq: $slug } }) {
+      id
       frontmatter {
         stack
         title
@@ -88,10 +88,10 @@ export const query = graphql`
         featuredImg {
           childImageSharp {
             gatsbyImageData(
-              width:400
+              width: 400
               placeholder: BLURRED
               formats: WEBP
-              transformOptions:{fit: CONTAIN, cropFocus: CENTER}
+              transformOptions: { fit: CONTAIN, cropFocus: CENTER }
             )
           }
         }

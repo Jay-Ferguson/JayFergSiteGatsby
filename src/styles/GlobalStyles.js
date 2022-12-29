@@ -12,6 +12,26 @@ const GlobalStyles = createGlobalStyle`
 
      
 }
+
+/* @font-face {
+  font-family: 'Montserrat-Light';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url(/static/admin/assets/fonts/Montserrat-Light.ttf) format("ttf");
+}
+
+@font-face {
+  font-family: 'RenoMono';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url(/static/admin/assets/fonts/RenoMono.ott) format("ott");
+} */
+
+
 *{
 
 }
@@ -21,6 +41,7 @@ html {
    min-height:100vh;
    font-size:62.5%;
 }
+
 body{
      height:100vh;
 }
@@ -30,7 +51,7 @@ body{
 }
 
 h1{
-     font-family: 'Montserrat';
+     /* font-family: 'RenoMono'; */
      text-transform: uppercase;
      letter-spacing: 0.2rem;
 }
@@ -49,9 +70,10 @@ button {
      justify-content: center;
 }
 
-.introMessage{
-     font-size:3rem;
-}
+
 `;
+
+
+
 
 export default GlobalStyles;

@@ -1,12 +1,14 @@
 ---
-title: JS Calculator 
+title: A blog post
 stack: JS CSS HTML
-slug: js-calculator
+slug: /firstblogpost/
 thumbImg: ../images/icon.png
 featuredImg: ../images/featured/calc-banner.png
 link: https://codepen.io/
 github: https://github.com/Jay-Ferguson
+date: "2021-08-01"
 
 ---
 
-This project uses React.js and bootstrap for styling to create a calculator
+Test first post
+

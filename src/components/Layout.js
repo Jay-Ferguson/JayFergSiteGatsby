@@ -4,6 +4,7 @@ import Typography from "../styles/Typography";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Logo from "../components/Logo";
+import Head from "../shared/Head";
 import MouseContextProvider from "../context/mouse-context";
 import styled from "styled-components";
 import { motion } from "framer-motion";
@@ -21,7 +22,7 @@ const Heading = styled.header`
 `;
 
 const Content = styled(motion.div)`
-  clip-path: polygon(0 3%, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 23px, 100% 0, 100% 100%, 0% 100%);
   margin-top:8rem;
   padding: 8rem 1rem 0rem 1rem;
   display: flex;
@@ -39,6 +40,7 @@ export default function Layout({ children }) {
   const [open, setOpen] = useState(false);
   return (
     <StyledLayout>
+      {/* <Head /> */}
       <GlobalStyles />
       <Typography />
       <MouseContextProvider>
@@ -53,7 +55,7 @@ export default function Layout({ children }) {
           exit={{ opacity: 0, x: -200 }}
           transition={{
             type: "tween",
-            duration: 0.15,
+            duration: 0.12,
           }}
         >
           {children}

@@ -1,12 +1,12 @@
 import * as React from "react";
 import Head from "../shared/Head";
 import styled from "styled-components";
-// import { Script } from "gatsby"
+import { Script } from "gatsby"
 import { keyframes } from "styled-components";
 import { graphql } from "gatsby";
 import { Link } from "gatsby";
 import Layout from "../components/Layout";
-import { ProfileImg } from "../components/ProfileImg";
+import {ProfileImg} from "../components/ProfileImg";
 import IntroCard from "../components/IntroCard";
 import IntroAnimation from "../components/IntroAnimation";
 import "normalize.css";
@@ -77,18 +77,19 @@ align-items:center;
 justify-content:center;
 `
 
+ 
+
 const HomePage = ({ data }) => {
   const { description } = data.site.siteMetadata;
   return (
     <Layout>
-      <Head />
+      <Head title="Home Page" />
       <SectionContainer>
         <IntroCard>
-          {/* <h1>{title}</h1> */}
           <IntroAnimation></IntroAnimation>
           <Line></Line>
           <IntroText>{description}</IntroText>
-          <ProfileImg></ProfileImg>
+          <ProfileImg />
           <LinkButton
             to="/projects"
           >
@@ -96,7 +97,7 @@ const HomePage = ({ data }) => {
           </LinkButton>
         </IntroCard>
       </SectionContainer>
-    {/* <Script src="../components/Script.js"></Script> */}
+      <Script src="../components/Script.js"></Script>
     </Layout>
   );
 };

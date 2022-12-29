@@ -2,28 +2,32 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../../components/Layout";
 import styled from "styled-components";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { useStaticQuery } from "gatsby";
 import StyledTitleCard from "../../components/TitleCard";
+import { useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 const Grid = styled.div`
-  max-width:110rem;
+  max-width: 110rem;
   width: 90%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-column-gap: 1.5rem;
   grid-row-gap: 1.5rem;
-  padding-bottom:4rem;
-
+  padding-bottom: 4rem;
   @media screen and (min-width: 700px) {
     grid-template-columns: 50% 50%;
     grid-column-gap: 1rem;
   }
 `;
 
-const GridLink = styled(Link)`
-
-`
+const GridLink = styled(motion(Link))`
+    
+`;
 
 const GridCard = styled.div`
   width: 100%;
@@ -41,7 +45,6 @@ const GridCard = styled.div`
   align-items: center;
   justify-content: flex-end;
   transition: 0.1s;
-
   &:hover {
     transform: scale(1.02);
     transition: 0.15s;
@@ -55,38 +58,67 @@ const StyledH3 = styled.h3`
 `;
 
 const SubTitle = styled.h3`
-margin-bottom:4rem;
-`
+  margin-bottom: 4rem;
+`;
 
 const Stack = styled.p`
   font-size: 1.8rem;
-  font-weight:100;
+  font-weight: 300;
   text-align: center;
 `;
+
+
+
 export default function Projects({ data }) {
   const projects = data.projects.nodes;
-  // const image = getImage(project.frontmatter.thumbImg.childImageSharp);
 
+  const { ref, inView } = useInView();
+  useEffect(() => {
+    console.log(inView)
+  })
+  // const image = getImage(projects.frontmatter.thumbImg.childImageSharp);
+  // console.log(projects);
+  // console.log(image);
+  
+  
+  
   return (
-    <Layout>
+    <Layout >
       <StyledTitleCard>Portfolio</StyledTitleCard>
       <SubTitle></SubTitle>
       <Grid>
         {projects.map((project) => (
-          <GridLink to={"/projects/" + project.frontmatter.slug} key={project.id}>
-            <GridCard
-            >
-              <GatsbyImage
-                image={project.frontmatter.thumbImg.childImageSharp.gatsbyImageData}
-                style={{width:"80%"}}
+          
+          <div ref={ref} key={project.id}>
+          <GridLink
+          to={"/projects/" + project.frontmatter.slug}
+          key={project.id}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ type: "ease", duration:0.5, bounce:0.2  }}
+          viewport={{ once: true }}  
+          >
+       
+            
+            <GridCard>
+              {/* <GatsbyImage
+                image={
+                  project.frontmatter.thumbImg.childImageSharp.gatsbyImageData
+                }
+                style={{ width: "80%" }}
                 alt="project-banner-image"
                 objectFit="contain"
                 placeholder="blurred"
-              />
-              <StyledH3>{project.frontmatter.title}</StyledH3>
-              <Stack>{project.frontmatter.stack}</Stack>
+              /> */}
+              <StyledH3 key={project.id}>
+                {project.frontmatter.title}
+              </StyledH3>
+              <Stack>
+                {project.frontmatter.stack}
+              </Stack>
             </GridCard>
           </GridLink>
+        </div>
         ))}
       </Grid>
     </Layout>
@@ -95,25 +127,25 @@ export default function Projects({ data }) {
 // export page query
 
 export const query = graphql`
-query ProjectPage {
-  projects: allMarkdownRemark {
-    nodes {
-      frontmatter {
-        slug
-        stack
-        title
-        thumbImg {
-          childImageSharp {
-            gatsbyImageData(
-              width:400
-              placeholder: BLURRED
-              layout: FULL_WIDTH
-              formats: [AUTO, WEBP]
-          )
+  query ProjectPage {
+    projects: allMdx {
+      nodes {
+        frontmatter {
+          slug
+          stack
+          title
+          thumbImg {
+            childImageSharp {
+              gatsbyImageData(
+                width: 400
+                placeholder: BLURRED
+                layout: FULL_WIDTH
+                formats: [AUTO, WEBP]
+              )
+            }
           }
         }
       }
     }
   }
-}
 `;
