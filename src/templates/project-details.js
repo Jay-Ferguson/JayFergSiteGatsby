@@ -56,12 +56,6 @@ export default function ProjectDetails({ data }) {
      <LineTwo />
       <Stack>{stack}</Stack>
      </IntroCard>
-     
-      {/* <Img
-        fluid={featuredImg.childImageSharp.fluid}
-        alt="project-details"
-        formats={["AUTO", "WEBP"]}
-      ></Img> */}
 
       <GatsbyImage image={image} alt="project-img" objectFit="contain">
 

@@ -67,22 +67,6 @@ module.exports = {
       },
       __key: "markdown",
     },
-    // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     name: "blogposts",
-    //     path: `${__dirname}/src/blogposts/`,
-    //   },
-    //   __key: "projects",
-    // },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `markdown`,
-    //     path: `${__dirname}/src/blogposts/`,
-    //   },
-    //   __key: "markdown",
-    // } ,
   ],
   siteMetadata: {
     title: "Jay' Personal Site",

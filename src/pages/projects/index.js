@@ -101,7 +101,7 @@ export default function Projects({ data }) {
        
             
             <GridCard>
-              {/* <GatsbyImage
+              <GatsbyImage
                 image={
                   project.frontmatter.thumbImg.childImageSharp.gatsbyImageData
                 }
@@ -109,7 +109,7 @@ export default function Projects({ data }) {
                 alt="project-banner-image"
                 objectFit="contain"
                 placeholder="blurred"
-              /> */}
+              />
               <StyledH3 key={project.id}>
                 {project.frontmatter.title}
               </StyledH3>
