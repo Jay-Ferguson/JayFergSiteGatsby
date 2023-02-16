@@ -67,6 +67,7 @@ font-weight:400;
 
 const ParagraphLink = styled.a`
 text-decoration: none;
+color:white;
 position: relative;
 border-bottom:solid 1px white;
 transition:.2s ease-in;
